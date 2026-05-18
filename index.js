@@ -7,7 +7,8 @@ const {
 } = require('discord.js');
 
 const cron = require('node-cron');
-const sqlite3 = require('sqlite3').verbose();
+const Database = require('better-sqlite3');
+const db = new Database('database.sqlite');
 
 const db = new sqlite3.Database('./database.sqlite');
 
